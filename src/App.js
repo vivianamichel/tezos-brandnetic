@@ -113,33 +113,54 @@ const Home = () => (
         </div>
       </div>
       <div class="connectioncolumn">
+      <NavLink exact activeClassName="current" to='/contract'>
       <button class="button button2">
          <img src={profilepic} width="45px" id="miniprofilepic"></img>John Doe
-        </button>
+        </button></NavLink>
+        <NavLink exact activeClassName="current" to='/contract'>
         <button class="button button2">
-          <img src={profilepic} width="45px" id="miniprofilepic"></img>John Doe
-        </button>
+         <img src={profilepic} width="45px" id="miniprofilepic"></img>John Doe
+        </button></NavLink>
+        <NavLink exact activeClassName="current" to='/contract'>
+      <button class="button button2">
+         <img src={profilepic} width="45px" id="miniprofilepic"></img>John Doe
+        </button></NavLink>
+        <NavLink exact activeClassName="current" to='/contract'>
+      <button class="button button2">
+         <img src={profilepic} width="45px" id="miniprofilepic"></img>John Doe
+        </button></NavLink>
+        <NavLink exact activeClassName="current" to='/contract'>
+      <button class="button button2">
+         <img src={profilepic} width="45px" id="miniprofilepic"></img>John Doe
+        </button></NavLink>
+        <NavLink exact activeClassName="current" to='/contract'>
         <button class="button button2">
-          <img src={profilepic} width="45px" id="miniprofilepic"></img>John Doe
-        </button>
+         <img src={profilepic} width="45px" id="miniprofilepic"></img>John Doe
+        </button></NavLink>
+        <NavLink exact activeClassName="current" to='/contract'>
+      <button class="button button2">
+         <img src={profilepic} width="45px" id="miniprofilepic"></img>John Doe
+        </button></NavLink>
+        <NavLink exact activeClassName="current" to='/contract'>
+      <button class="button button2">
+         <img src={profilepic} width="45px" id="miniprofilepic"></img>John Doe
+        </button></NavLink>
+        <NavLink exact activeClassName="current" to='/contract'>
+      <button class="button button2">
+         <img src={profilepic} width="45px" id="miniprofilepic"></img>John Doe
+        </button></NavLink>
+        <NavLink exact activeClassName="current" to='/contract'>
         <button class="button button2">
-          <img src={profilepic} width="45px" id="miniprofilepic"></img>John Doe
-        </button>
-        <button class="button button2">
-          <img src={profilepic} width="45px" id="miniprofilepic"></img>John Doe
-        </button>
-        <button class="button button2">
-          <img src={profilepic} width="45px" id="miniprofilepic"></img>John Doe
-        </button>
-        <button class="button button2">
-          <img src={profilepic} width="45px" id="miniprofilepic"></img>John Doe
-        </button>
-        <button class="button button2">
-          <img src={profilepic} width="45px" id="miniprofilepic"></img>John Doe
-        </button>
-        <button class="button button2">
-          <img src={profilepic} width="45px" id="miniprofilepic"></img>John Doe
-        </button>
+         <img src={profilepic} width="45px" id="miniprofilepic"></img>John Doe
+        </button></NavLink>
+        <NavLink exact activeClassName="current" to='/contract'>
+      <button class="button button2">
+         <img src={profilepic} width="45px" id="miniprofilepic"></img>John Doe
+        </button></NavLink>
+        <NavLink exact activeClassName="current" to='/contract'>
+      <button class="button button2">
+         <img src={profilepic} width="45px" id="miniprofilepic"></img>John Doe
+        </button></NavLink>
       </div>
       
     </div>
@@ -165,25 +186,44 @@ const Explore = () => (
 	<div id="list" class="section">
     <div class="item1"><NavLink exact activeClassName="current" to='/contract'>
       <img src={explore1} style={{borderRadius: "16px"}} width="100%" height="100%"></img></NavLink></div>
-    <div class="item2"><img src={explore2} style={{borderRadius: "16px"}} width="100%" height="100%"></img></div>
-    <div class="item3"><img src={explore3} style={{borderRadius: "16px"}} width="100%" height="100%"></img></div>
-    <div class="item2"><img src={explore4} style={{borderRadius: "16px"}} width="100%" height="100%"></img></div>
-		<div class="item4"><img src={explore5} style={{borderRadius: "16px"}} width="100%" height="100%"></img></div>
-		<div class="item2"><img src={explore6} style={{borderRadius: "16px"}} width="100%" height="100%"></img></div>
-		<div class="item3"><img src={explore7} style={{borderRadius: "16px"}} width="100%" height="100%"></img></div>
-		<div class="item1"><img src={explore8} style={{borderRadius: "16px"}} width="100%" height="100%"></img></div>
-		<div class="item3"><img src={explore1} style={{borderRadius: "16px"}} width="100%" height="100%"></img></div>
-		<div class="item4"><img src={explore2} style={{borderRadius: "16px"}} width="100%" height="100%"></img></div>
-		<div class="item2"><img src={explore3} style={{borderRadius: "16px"}} width="100%" height="100%"></img></div>
-		<div class="item4"><img src={explore4} style={{borderRadius: "16px"}} width="100%" height="100%"></img></div>
-    <div class="item1"><img src={explore5} style={{borderRadius: "16px"}} width="100%" height="100%"></img></div>
-		<div class="item2"><img src={explore6} style={{borderRadius: "16px"}} width="100%" height="100%"></img></div>
-		<div class="item3"><img src={explore7} style={{borderRadius: "16px"}} width="100%" height="100%"></img></div>
-		<div class="item1"><img src={explore8} style={{borderRadius: "16px"}} width="100%" height="100%"></img></div>
-		<div class="item3"><img src={explore1} style={{borderRadius: "16px"}} width="100%" height="100%"></img></div>
-		<div class="item4"><img src={explore2} style={{borderRadius: "16px"}} width="100%" height="100%"></img></div>
-		<div class="item2"><img src={explore3} style={{borderRadius: "16px"}} width="100%" height="100%"></img></div>
-		<div class="item4"><img src={explore4} style={{borderRadius: "16px"}} width="100%" height="100%"></img></div>
+    <div class="item2"><NavLink exact activeClassName="current" to='/contract'>
+      <img src={explore2} style={{borderRadius: "16px"}} width="100%" height="100%"></img></NavLink></div>
+    <div class="item3"><NavLink exact activeClassName="current" to='/contract'>
+      <img src={explore3} style={{borderRadius: "16px"}} width="100%" height="100%"></img></NavLink></div>
+    <div class="item2"> <NavLink exact activeClassName="current" to='/contract'>
+      <img src={explore4} style={{borderRadius: "16px"}} width="100%" height="100%"></img></NavLink></div>
+		<div class="item4"><NavLink exact activeClassName="current" to='/contract'>
+      <img src={explore5} style={{borderRadius: "16px"}} width="100%" height="100%"></img></NavLink></div>
+		<div class="item2"><NavLink exact activeClassName="current" to='/contract'>
+      <img src={explore6} style={{borderRadius: "16px"}} width="100%" height="100%"></img></NavLink></div>
+		<div class="item3"><NavLink exact activeClassName="current" to='/contract'>
+      <img src={explore7} style={{borderRadius: "16px"}} width="100%" height="100%"></img></NavLink></div>
+		<div class="item1"><NavLink exact activeClassName="current" to='/contract'>
+      <img src={explore8} style={{borderRadius: "16px"}} width="100%" height="100%"></img></NavLink></div>
+		<div class="item3"><NavLink exact activeClassName="current" to='/contract'>
+      <img src={explore1} style={{borderRadius: "16px"}} width="100%" height="100%"></img></NavLink></div>
+		<div class="item4"><NavLink exact activeClassName="current" to='/contract'>
+      <img src={explore2} style={{borderRadius: "16px"}} width="100%" height="100%"></img></NavLink></div>
+		<div class="item2"><NavLink exact activeClassName="current" to='/contract'>
+      <img src={explore3} style={{borderRadius: "16px"}} width="100%" height="100%"></img></NavLink></div>
+		<div class="item4"><NavLink exact activeClassName="current" to='/contract'>
+      <img src={explore4} style={{borderRadius: "16px"}} width="100%" height="100%"></img></NavLink></div>
+    <div class="item1"><NavLink exact activeClassName="current" to='/contract'>
+      <img src={explore5} style={{borderRadius: "16px"}} width="100%" height="100%"></img></NavLink></div>
+		<div class="item2"><NavLink exact activeClassName="current" to='/contract'>
+      <img src={explore6} style={{borderRadius: "16px"}} width="100%" height="100%"></img></NavLink></div>
+		<div class="item3"> <NavLink exact activeClassName="current" to='/contract'>
+      <img src={explore7} style={{borderRadius: "16px"}} width="100%" height="100%"></img></NavLink></div>
+		<div class="item1"> <NavLink exact activeClassName="current" to='/contract'>
+      <img src={explore8} style={{borderRadius: "16px"}} width="100%" height="100%"></img></NavLink></div>
+		<div class="item3"><NavLink exact activeClassName="current" to='/contract'>
+      <img src={explore1} style={{borderRadius: "16px"}} width="100%" height="100%"></img></NavLink></div>
+		<div class="item4"><NavLink exact activeClassName="current" to='/contract'>
+      <img src={explore2} style={{borderRadius: "16px"}} width="100%" height="100%"></img></NavLink></div>
+		<div class="item2"><NavLink exact activeClassName="current" to='/contract'>
+      <img src={explore3} style={{borderRadius: "16px"}} width="100%" height="100%"></img></NavLink></div>
+		<div class="item4"><NavLink exact activeClassName="current" to='/contract'>
+      <img src={explore4} style={{borderRadius: "16px"}} width="100%" height="100%"></img></NavLink></div>
 	</div>		
 </div>
 );
@@ -200,6 +240,54 @@ const Profile = () => (
       Most Recent Reviews:
       </div>
     </div>
+    <div class = "pendingContracts2">
+      <div class = "timelineText">Current Pending Contracts</div><br></br>
+        <div class="contract">
+          Contract 
+          <div class ="contractinner">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+          ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+          mollit anim id est laborum
+          <br></br><p></p>
+          Amount: $xxx
+          </div>
+          <button class="button button4">Accept</button>
+          <button class="button button3">Renegotiate</button>
+          <button class="button button5">Decline</button>
+        </div>
+        <div class="contract">
+          Contract 
+          <div class ="contractinner">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+          ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+          mollit anim id est laborum
+          <br></br><p></p>
+          Amount: $xxx
+          </div>
+          <button class="button button4">Accept</button>
+          <button class="button button3">Renegotiate</button>
+          <button class="button button5">Decline</button>
+        </div>
+        <div class="contract">
+          Contract 
+          <div class ="contractinner">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+          ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+          mollit anim id est laborum
+          <br></br><p></p>
+          Amount: $xxx
+          </div>
+          <button class="button button4">Accept</button>
+          <button class="button button3">Renegotiate</button>
+          <button class="button button5">Decline</button>
+        </div>
+      </div>
   </div>
 );
 const Contract = () => (
