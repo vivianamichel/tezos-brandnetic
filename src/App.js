@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter, NavLink, Switch, Route } from 'react-router-dom';
+import { useWallet } from './hooks/use-wallet';
 import logo from './images/logo.png';
 import profilepic from './images/profilepic.png';
 import explore1 from './images/explore1.jpg';
@@ -22,7 +23,7 @@ const App = () => (
   <BrowserRouter>
     <div>
       <Navigation />
-      <Main />
+      <Main/>
     </div>
   </BrowserRouter>
 );
@@ -32,7 +33,7 @@ const Navigation = () => (
     <ul>
       <NavLink exact activeClassName="current" to='/'><img src={logo} width="22%" align="left"></img></NavLink>
       <div id="bar" >
-        <li><NavLink exact activeClassName="current" to='/'>Connect</NavLink></li>
+        <li><NavLink exact activeClassName="current" to='/connect'>Connect</NavLink></li>
         <li><NavLink exact activeClassName="current" to='/explore'>Explore</NavLink></li>
         <li><NavLink exact activeClassName="current" to='/profile'>My Profile</NavLink></li>
       </div>
@@ -41,7 +42,47 @@ const Navigation = () => (
   </nav>
 );
 
+const Main = () => (
+  <Switch>
+    <Route exact path='/' component={Home}></Route>
+    <Route exact path='/connect' component={Connect}></Route>
+    <Route exact path='/explore' component={Explore}></Route>
+    <Route exact path='/profile' component={Profile}></Route>
+    <Route exact path='/contract' component={Contract}></Route>
+    <Route exact path='/userprofile' component={UserProfile}></Route>
+  </Switch>
+);
+
 const Home = () => (
+  <div class = "homepage">
+    <div class = "newuser">
+      <div class = "timelineText">Create New Account</div><br></br>
+      <div class="contractText">
+        Email
+        <input class="input input2" type="text"></input> <br></br>
+        Username
+        <input class="input input2" type="text"></input> <br></br>
+        Password
+        <input class="input input2" type="password"></input> <br></br>
+        <button class="button button3">Create</button>
+      </div>
+    </div>
+    <div class ="login">
+      <div class = "timelineText">Login</div><br></br>
+      <div class="contractText">
+        Email
+        <input class="input input2" type="text"></input> <br></br>
+        Username
+        <input class="input input2" type="text"></input> <br></br>
+        Password
+        <input class="input input2" type="password"></input> <br></br>
+        <button class="button button3">Login</button>
+      </div>
+    </div>
+  </div>
+);
+
+const Connect = () => (
     <div>
       <div class = "connectleft">Timeline</div>
       <div class = "connectright">Connections</div> 
@@ -184,9 +225,9 @@ const Explore = () => (
     <button class="button button1">Fitness</button>
     <p></p>
 	<div id="list" class="section">
-    <div class="item1"><NavLink exact activeClassName="current" to='/contract'>
+    <div class="item1"><NavLink exact activeClassName="current" to='/userprofile'>
       <img src={explore1} style={{borderRadius: "16px"}} width="100%" height="100%"></img></NavLink></div>
-    <div class="item2"><NavLink exact activeClassName="current" to='/contract'>
+    <div class="item2"><NavLink exact activeClassName="current" to='/userprofile'>
       <img src={explore2} style={{borderRadius: "16px"}} width="100%" height="100%"></img></NavLink></div>
     <div class="item3"><NavLink exact activeClassName="current" to='/contract'>
       <img src={explore3} style={{borderRadius: "16px"}} width="100%" height="100%"></img></NavLink></div>
@@ -230,14 +271,18 @@ const Explore = () => (
 const Profile = () => (
   <div>
     <div class="profilecolumn1">
-      <img src={profilepic} width="350px" id="userpic"></img>
+      <img src={profilepic} width="70%" id="userpic"></img>
       <div class="profiletext">John Doe<br></br>
       <img src={rating} width="40%"></img><br></br>
       <div class="profiletextsmaller"> Rating: 4.08<br></br> </div>
       <img src={insta} width="50px" id="pic"></img>
       <img src={youtube} width="65px" id="pic"></img>
       <img src={tiktok} width="60px" id="pic"></img> <p></p>
-      Most Recent Reviews:
+      Most Recent Collaborations: <p></p>
+      <img src={explore5} style={{borderRadius: "16px"}} width="330px" height="200px"></img><p></p>
+      <img src={rating} width="30%"></img><br></br>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+          dolore magna aliqua. 
       </div>
     </div>
     <div class = "pendingContracts2">
@@ -254,8 +299,8 @@ const Profile = () => (
           Amount: $xxx
           </div>
           <button class="button button4">Accept</button>
-          <button class="button button3">Renegotiate</button>
           <button class="button button5">Decline</button>
+          <button class="button button3">Renegotiate</button>
         </div>
         <div class="contract">
           Contract 
@@ -269,8 +314,8 @@ const Profile = () => (
           Amount: $xxx
           </div>
           <button class="button button4">Accept</button>
-          <button class="button button3">Renegotiate</button>
           <button class="button button5">Decline</button>
+          <button class="button button3">Renegotiate</button>
         </div>
         <div class="contract">
           Contract 
@@ -284,9 +329,42 @@ const Profile = () => (
           Amount: $xxx
           </div>
           <button class="button button4">Accept</button>
-          <button class="button button3">Renegotiate</button>
           <button class="button button5">Decline</button>
+          <button class="button button3">Renegotiate</button>
         </div>
+      </div>
+      <div class="messagingcolumn"> 
+        <div class = "timelineText">Messages</div><br></br>
+        <button class="button button2">
+         <img src={profilepic} width="45px" id="miniprofilepic"></img>
+           John Doe</button>
+           <button class="button button2">
+         <img src={profilepic} width="45px" id="miniprofilepic"></img>
+           John Doe</button>
+           <button class="button button2">
+         <img src={profilepic} width="45px" id="miniprofilepic"></img>
+           John Doe</button>
+           <button class="button button2">
+         <img src={profilepic} width="45px" id="miniprofilepic"></img>
+           John Doe</button>
+           <button class="button button2">
+         <img src={profilepic} width="45px" id="miniprofilepic"></img>
+           John Doe</button>
+           <button class="button button2">
+         <img src={profilepic} width="45px" id="miniprofilepic"></img>
+           John Doe</button>
+           <button class="button button2">
+         <img src={profilepic} width="45px" id="miniprofilepic"></img>
+           John Doe</button>
+           <button class="button button2">
+         <img src={profilepic} width="45px" id="miniprofilepic"></img>
+           John Doe</button>
+           <button class="button button2">
+         <img src={profilepic} width="45px" id="miniprofilepic"></img>
+           John Doe</button>
+           <button class="button button2">
+         <img src={profilepic} width="45px" id="miniprofilepic"></img>
+           John Doe</button>
       </div>
   </div>
 );
@@ -313,12 +391,56 @@ const Contract = () => (
     <button class="button button3">Send</button>
   </div>
 );
-const Main = () => (
-  <Switch>
-    <Route exact path='/' component={Home}></Route>
-    <Route exact path='/explore' component={Explore}></Route>
-    <Route exact path='/profile' component={Profile}></Route>
-    <Route exact path='/contract' component={Contract}></Route>
-  </Switch>
+
+const UserProfile = () => (
+  <div>
+    <div class="userprofilecolumn1">
+      <img src={profilepic} width="70%" id="userpic"></img>
+      <div class="profiletext">John Doe<br></br>
+      <img src={rating} width="40%"></img><br></br>
+      <div class="profiletextsmaller"> Rating: 4.08<p></p> </div>
+      <img src={insta} width="50px" id="pic"></img>
+      <img src={youtube} width="65px" id="pic"></img>
+      <img src={tiktok} width="60px" id="pic"></img> <p></p>
+      <div class="profiletext">User Media Stats<br></br></div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+          dolore magna aliqua. 
+      </div>
+    </div>
+    <div class="userprofilecolumn2">
+      <div class = "timelineText">Past Collaborations</div>
+      <div class="contract">
+      <img src={rating} width="20%" id="miniprofilepic" align="left"></img>
+        <div class = "timelineinnerText">
+          <img src={explore5} id="usercontent" style={{borderRadius: "16px"}} width="80%" height="75%"></img>
+          <p></p>
+          <div class="usercontenttext">
+          <div class="usercontenttext2">John Doe</div> <br></br>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+          dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+          dolore magna aliqua.
+          <p></p>
+          </div>
+          <p></p>
+        </div>
+      </div>
+      <div class="contract">
+      <img src={rating} width="20%" id="miniprofilepic" align="left"></img>
+        <div class = "timelineinnerText">
+          <img src={explore5} id="usercontent" style={{borderRadius: "16px"}} width="80%" height="75%"></img>
+          <p></p>
+          <div class="usercontenttext">
+          <div class="usercontenttext2">John Doe</div> <br></br>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+          dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+          dolore magna aliqua.
+          <p></p>
+          </div>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
 );
+
 export default App;
